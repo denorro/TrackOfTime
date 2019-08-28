@@ -1,24 +1,19 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" style="background-color: #71da71;">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <%= link_to posts_path, class: 'navbar-brand' do %>
       <ion-icon name="alarm"></ion-icon>
-      Track of Time</a>
+      Track of Time
+    <% end %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <%= link_to 'Recent Post', posts_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <%= link_to 'New Post', new_post_path, class: 'nav-link' %>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -37,7 +32,6 @@
             <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
           </li>
         <% end %>
-
       </ul>
     </div>
   </div>
